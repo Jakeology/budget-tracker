@@ -145,6 +145,14 @@ function sendTransaction(isAdding) {
   });
 }
 
+function transactionSuccess() {
+  let errorEl = document.querySelector(".form .error");
+
+  errorEl.style.color = "green";
+  errorEl.textContent = "Your offline transactions have successfully been submitted.";
+
+}
+
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };
